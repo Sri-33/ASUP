@@ -1,0 +1,6 @@
+from scipy import stats
+group1 = [23, 21, 18, 25, 27]
+group2 = [30, 28, 26, 29, 31]
+t_stat, p_val = stats.ttest_ind(group1, group2)
+print("t-statistic:", t_stat)
+print("p-value:", p_val)
