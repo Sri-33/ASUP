@@ -1,0 +1,5 @@
+import numpy as np
+scores = list(map(int, input("Enter student scores: ").split()))
+print("Mean:", np.mean(scores))
+print("Median:", np.median(scores))
+print("Standard Deviation:", np.std(scores))
