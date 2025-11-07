@@ -1,0 +1,8 @@
+import numpy as np
+points = [(3, 64), (6, 133), (9, 208)]
+X = np.array([[t**2, t, 1] for t, _ in points])
+Y = np.array([v for _, v in points])
+a, b, c = np.linalg.solve(X, Y)
+t = 15
+speed = a*t**2 + b*t + c
+print("Speed at t=15 seconds:", speed)
