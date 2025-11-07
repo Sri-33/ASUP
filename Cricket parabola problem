@@ -1,0 +1,13 @@
+import numpy as np
+points = [(10, 8), (20, 16), (30, 18)]
+X = np.array([[x**2, x, 1] for x, _ in points])
+Y = np.array([y for _, y in points])
+a, b, c = np.linalg.solve(X, Y)
+print(f"Equation: y = {a}x² + {b}x + {c}")
+x = 70
+y = a*x**2 + b*x + c
+print("Ball height at boundary:", y)
+if y > 0:
+print("CSK won the match (six)!")
+else:
+print("CSK did not win.")
