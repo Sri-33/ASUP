@@ -1,0 +1,8 @@
+import numpy as np
+from PIL import Image
+img = Image.open("input.jpg").convert("L")
+img_array = np.array(img)
+inverted = 255 - img_array
+result = Image.fromarray(inverted)
+result.save("inverted.jpg")
+result.show()
