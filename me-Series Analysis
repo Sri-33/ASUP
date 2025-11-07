@@ -1,0 +1,11 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv("timeseries.csv")
+df["Date"] = pd.to_datetime(df["Date"])
+df = df.set_index("Date")
+print(df.describe())
+df.plot(y="Value", figsize=(10, 5), marker="o")
+plt.title("Time Series Data")
+plt.xlabel("Date")
+plt.ylabel("Value")
+plt.show()
